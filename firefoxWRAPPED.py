@@ -16,7 +16,7 @@ for row in cur.execute("SELECT * FROM moz_places;"):
             continue
       yil = int(str(yil)[:10])
       year = datetime.utcfromtimestamp(yil).strftime('%Y')
-      if(year=="2022"):
+      if(year==str(datetime.today().year)):
             site = url(row[1])
             if site not in places:
                   places[site] = 1
